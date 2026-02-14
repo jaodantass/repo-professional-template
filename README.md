@@ -1,5 +1,7 @@
 # Repo Professional Template
 
+![CI](https://github.com/jaodantass/repo-professional-template/actions/workflows/ci.yml/badge.svg)
+
 Professional starter template for portfolio and production-like study projects.
 
 ## Purpose
@@ -45,7 +47,9 @@ Examples:
 │   ├── ISSUE_TEMPLATE/
 │   │   ├── bug_report.md
 │   │   └── feature_request.md
-│   └── PULL_REQUEST_TEMPLATE.md
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── workflows/
+│       └── ci.yml
 ├── .husky/
 │   ├── pre-commit
 │   └── commit-msg
@@ -80,6 +84,12 @@ Examples:
 - `npm run lint`: lint codebase using ESLint
 - `npm run format`: format codebase with Prettier
 - `npm run format:check`: verify formatting without rewriting files
+
+## CI Pipeline
+
+- GitHub Actions workflow: `.github/workflows/ci.yml`
+- Triggered on pushes and pull requests to `main`
+- Runs dependency install, lint, and format checks
 
 ## Workflow
 
