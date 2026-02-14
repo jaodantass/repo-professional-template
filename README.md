@@ -40,10 +40,18 @@ Examples:
 .
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
 │   └── PULL_REQUEST_TEMPLATE.md
 ├── docs/
 └── README.md
 ```
+
+## Included Templates
+
+- `bug_report.md`: standardized bug reporting with reproduction and environment details
+- `feature_request.md`: feature proposal with acceptance criteria
+- `PULL_REQUEST_TEMPLATE.md`: PR checklist and quality gate before merge
 
 ## Workflow
 
