@@ -5,6 +5,7 @@ Professional starter template for portfolio and production-like study projects.
 ## Purpose
 
 This repository provides a reusable baseline for:
+
 - Consistent project structure
 - Contribution workflow
 - Issue and PR standards
@@ -17,6 +18,7 @@ Use the following pattern for new repositories:
 `fs-<domain>-<service>`
 
 Examples:
+
 - `fs-tasks-api`
 - `fs-orders-service`
 - `fs-analytics-dashboard`
@@ -30,6 +32,7 @@ Examples:
 - `chore/<short-description>`: maintenance, docs, tooling
 
 Examples:
+
 - `feat/auth-jwt`
 - `fix/pagination-metadata`
 - `chore/update-readme`
@@ -43,7 +46,18 @@ Examples:
 │   │   ├── bug_report.md
 │   │   └── feature_request.md
 │   └── PULL_REQUEST_TEMPLATE.md
+├── .husky/
+│   ├── pre-commit
+│   └── commit-msg
+├── .editorconfig
+├── .gitignore
+├── .prettierrc
+├── .prettierignore
+├── commitlint.config.cjs
+├── eslint.config.cjs
 ├── docs/
+├── package.json
+├── tsconfig.json
 └── README.md
 ```
 
@@ -52,6 +66,20 @@ Examples:
 - `bug_report.md`: standardized bug reporting with reproduction and environment details
 - `feature_request.md`: feature proposal with acceptance criteria
 - `PULL_REQUEST_TEMPLATE.md`: PR checklist and quality gate before merge
+
+## Quality Tooling
+
+- `EditorConfig`: enforces basic editor formatting defaults across machines
+- `ESLint`: catches code issues and enforces TypeScript lint rules
+- `Prettier`: formats files consistently
+- `Husky + lint-staged`: runs checks on staged files before commit
+- `Commitlint`: enforces conventional commit message format
+
+## NPM Scripts
+
+- `npm run lint`: lint codebase using ESLint
+- `npm run format`: format codebase with Prettier
+- `npm run format:check`: verify formatting without rewriting files
 
 ## Workflow
 
@@ -69,10 +97,12 @@ Examples:
 3. Rename it following the naming convention.
 4. Update the README for the new project scope.
 5. Start with a first issue and link work to a PR.
+6. Run `npm install` to initialize tooling and Git hooks.
 
 ## Definition of Ready (New Repositories)
 
 Before coding features, ensure:
+
 - Repository name follows the naming convention
 - README is updated for project scope
 - Issue and PR templates are available
